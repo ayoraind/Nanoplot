@@ -1,4 +1,4 @@
-## Workflow to remove Human DNA contaminants from microbial reads.
+## Workflow for generating QC statistics from long read sequence datasets.
 ### Usage
 
 ```
