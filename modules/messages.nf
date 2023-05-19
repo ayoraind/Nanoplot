@@ -21,7 +21,7 @@ def version_message(String version) {
       println(
             """
             ============================================================================
-             NANOPORE READ DATASET STATISTICS: TAPIR Pipeline version ${version}
+             LONG READ SEQUENCE DATASET STATISTICS: TAPIR Pipeline version ${version}
             ============================================================================
             """.stripIndent()
         )
@@ -30,21 +30,21 @@ def version_message(String version) {
 
 
 def pipeline_start_message(String version, Map params){
-    log.info "==============================================================================="
-    log.info "    NANOPORE READ DATASET STATISTICS STATISTICS: TAPIR Pipeline version ${version}"
-    log.info "==============================================================================="
+    log.info "===================================================================================="
+    log.info " LONG READ SEQUENCE DATASET STATISTICS STATISTICS: TAPIR Pipeline version ${version}"
+    log.info "===================================================================================="
     log.info "Running version   : ${version}"
     log.info "Fastq inputs      : ${params.reads}"
     log.info ""
-    log.info "-------------------------- Other parameters -----------------------------------"
+    log.info "-------------------------- Other parameters ----------------------------------------"
     params.sort{ it.key }.each{ k, v ->
         if (v){
             log.info "${k}: ${v}"
         }
     }
-    log.info "==============================================================================="
+    log.info "===================================================================================="
     log.info "Outputs written to path '${params.output_dir}'"
-    log.info "==============================================================================="
+    log.info "===================================================================================="
 
     log.info ""
 }
